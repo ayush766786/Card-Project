@@ -33,6 +33,13 @@ const data = [
     info: "Starting in the colorful ",
     image: "https://i0.wp.com/grehlakshmi.com/wp-content/uploads/2024/01/Famous-Places-in-Darjelling.webp?fit=1200%2C675&ssl=1",
     price: "78,595"
+  },
+  {
+    id: 6,
+    name: "Haridwar",
+    info: "Haridwar is a very holy place ",
+    image: "https://i.pinimg.com/736x/9e/24/92/9e2492566313aadf2db0471e175e00ee.jpg",
+    price: "78,890"
   }
 ]
 export default data;
