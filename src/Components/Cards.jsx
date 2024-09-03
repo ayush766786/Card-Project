@@ -7,7 +7,7 @@ const Cards = ({ tours ,remoreTour}) => {
       <div className="cards">
         {
           tours.map((tour) => {
-            return <CardItems key={tour.id} {...tour} remoreTour={remoreTour}></CardItems>
+            return <CardItems key={tour.id} tour={tour} remoreTour={remoreTour}></CardItems>
           })
         }
       </div>

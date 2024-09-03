@@ -1,10 +1,10 @@
 import { useState } from "react"
 
-const CardItems = ({ id, image, info, price, name, remoreTour }) => {
+const CardItems = ({ tour, remoreTour }) => {
 
   const [readmore, setReadmore] = useState(false);
 
-  const descreption = readmore ? info : `${info.substring(0, 10)}....`
+  const descreption = readmore ? tour.info : `${tour.info.substring(0, 10)}....`
 
   const readmoreHandler = () => {
     setReadmore(!readmore)
@@ -15,11 +15,11 @@ const CardItems = ({ id, image, info, price, name, remoreTour }) => {
   return <>
     <div className="card-items">
       
-        <img src={image} alt="" />
+        <img src={tour.image} alt="" />
         <div className="tour-info">
           <div className="tour-details">
-            <h4 className="tour-price">₹{price}</h4>
-            <h4 className="tour-name">{name}</h4>
+            <h4 className="tour-price">₹{tour.price}</h4>
+            <h4 className="tour-name">{tour.name}</h4>
           </div>
           <div className="descreption">
             {descreption}
@@ -31,7 +31,7 @@ const CardItems = ({ id, image, info, price, name, remoreTour }) => {
         </div>
        
       
-      <button className="btn-red" onClick={() => remoreTour(id)}>
+      <button className="btn-red" onClick={() => remoreTour(tour.id)}>
           Not Interested
         </button>
     </div>
